@@ -1,4 +1,6 @@
 import json
+import string
+import re
 
 menu=1
 
@@ -15,6 +17,7 @@ while (menu==1):
     section = input("Escolha uma das opções: ")
 
     data_base = []
+    new_base = []
     new_movie = {}
 
     def title_id():
@@ -25,6 +28,23 @@ while (menu==1):
             for i in mainList:
                 print(i["id"], i["Titulo"])
         file.close()
+
+    def newRegistry():
+        new_title = input("O título: ")
+        new_movie["Titulo"] = new_title
+
+        movie_release = input("O ano de lançamento: ")
+        new_movie["Lancamento"] = movie_release
+
+        movie_length = input("A longevidade: ")
+        new_movie["Tempo"] = movie_length
+
+        movie_diretor = input("O diretor do filme: ")
+        new_movie["Diretor"] = movie_diretor
+
+        movie_writer = input("O escritor do filme: ")
+        new_movie["Escritor"] = movie_writer
+
 
     def orgJson():
         # Carrega a informação
@@ -40,29 +60,7 @@ while (menu==1):
             json.dump(data_base, file, indent=4)
             file.close()
             
-
-    
     if section == "1":        
-        # Registo novo
-        def newRegistry():
-            new_title = input("O título: ")
-            new_movie["Titulo"] = new_title
-
-            movie_release = input("O ano de lançamento: ")
-            new_movie["Lancamento"] = movie_release
-
-            movie_length = input("A longevidade: ")
-            new_movie["Tempo"] = movie_length
-
-            movie_diretor = input("O diretor do filme: ")
-            new_movie["Diretor"] = movie_diretor
-
-            movie_writer = input("O escritor do filme: ")
-            new_movie["Escritor"] = movie_writer
-
-            
-
-
         def writeJson():
             # Carrega a informação
             with open('data.json', 'r+') as file:
@@ -78,31 +76,78 @@ while (menu==1):
                 file.seek(0)
                 json.dump(data_base, file, indent=4)
                 file.close()
-
+        # Registo novo
         newRegistry()
         writeJson()
         
     """ ATUALIZAR """
     if section == "2":
-        title_id()
+        
 
-        quest_update = input("Que filme quer atualizar? ")
+        while True:
+            password = "admin123"
 
-        with open('data.json', 'r') as file:
-            data_base = json.load(file)
-            print(data_base)
-            print(data_base[0])
+            login_username = input("Insert the admin name: ")
+            login_password = input("Insert the admin password: ")
+            attempts = 3
 
-            new_title = input("Escreva um título novo: ")
-            data_base[0]["Titulo"] = new_title
-            new_lancamento = input("Escreva um ano de lancamento novo: ")
-            data_base[0]["Lancamento"] = new_lancamento
-            
+            if re.search("[a-z]+", password) is None:
+                print('At least one character must be in the range [a-z]')
+
+            if re.search("[A-Z]+", password) is None:
+                print('At least one character must be in the range [A-Z]')
+
+            if re.search("[0-9]+", password) is None:
+                print('At least one character must be in the range [0-9]')
+
+            if re.search("[@#$]+", password) is None:
+                print('At least one character must be in the range [a@#$]')
+
+            title_id()
+
+            with open('data.json', 'r+') as file:
+                data_base = json.load(file)
+                update_dict = int(input("Qual é o id/filme que quer atualizar?"))
+                print(data_base[update_dict])
+                file.close()
+                            
+
+                
+            def updateRegistry():
+                new_movie["id"] = update_dict
+
+                new_title = input("O título: ")
+                new_movie["Titulo"] = new_title
+
+                movie_release = input("O ano de lançamento: ")
+                new_movie["Lancamento"] = movie_release
+
+                movie_length = input("A longevidade: ")
+                new_movie["Tempo"] = movie_length
+
+                movie_diretor = input("O diretor do filme: ")
+                new_movie["Diretor"] = movie_diretor
+
+                movie_writer = input("O escritor do filme: ")
+                new_movie["Escritor"] = movie_writer
+
+
+            updateRegistry()
+
+            with open('data.json', 'r+') as file:
+                data_base = json.load(file)
+                data_base[update_dict] = new_movie
+                new_base = data_base
+                print(new_base)
+                file.close()
+            with open ('data.json', 'w') as file:
+                print(new_base)
+                json.dump(new_base, file, indent=4)
+                file.close()
 
     """ REMOVER """
     if section == "3":
         title_id()
-   
         def deleteJson():
             newList = []
 
@@ -121,7 +166,6 @@ while (menu==1):
 
         deleteJson()
         orgJson()
-        print(1)
 
 
     """" MOSTRAR TUDO """
@@ -134,7 +178,6 @@ while (menu==1):
                     data_base = json.load(file)
                 print(data_base)
                 break
-
             # COM FILTRO    
             elif esc == "SIM" or esc == "sim":
                 filter = input("Que filtro quer aplicar(Título,Lancamento,Tempo,Diretor,Escritor): ")
@@ -144,45 +187,10 @@ while (menu==1):
                 for dict in data_base:
                     print(dict[filter])
                 break
-                        
             else:
-                print("Tem que escrever Sim ou Não!")
-            
-
-
-
+                print("Tem que escrever Sim ou Não!")        
     if section == "5":
-        title_id()
-
-        with open('data.json', 'r') as file:
-            data_base = json.load(file)
-            update_dict = int(input("Qual é o id/filme que quer atualizar?"))
-            print(data_base[update_dict])
-        file.close()                    
-
-            
-        def newRegistry():
-            new_title = input("O título: ")
-            new_movie["Titulo"] = new_title
-
-            movie_release = input("O ano de lançamento: ")
-            new_movie["Lancamento"] = movie_release
-
-            movie_length = input("A longevidade: ")
-            new_movie["Tempo"] = movie_length
-
-            movie_diretor = input("O diretor do filme: ")
-            new_movie["Diretor"] = movie_diretor
-
-            movie_writer = input("O escritor do filme: ")
-            new_movie["Escritor"] = movie_writer
-
-        newRegistry()
-        with open('data.json', 'r') as file:
-            data_base = json.load(file)
-            data_base[update_dict] = new_movie
-            json.dump(data_base, file, indent=4)
-
+        print(5)
 
     if section == "6":
         print(6)

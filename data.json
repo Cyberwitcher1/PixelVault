@@ -9,26 +9,10 @@
     },
     {
         "id": 1,
-        "Titulo": "2222",
+        "Titulo": "2",
         "Lancamento": "2",
         "Tempo": "2",
-        "Diretor": "22",
+        "Diretor": "2",
         "Escritor": "2"
-    },
-    {
-        "id": 2,
-        "Titulo": "4",
-        "Lancamento": "4444",
-        "Tempo": "4",
-        "Diretor": "4",
-        "Escritor": "4"
-    },
-    {
-        "id": 3,
-        "Titulo": "33333",
-        "Lancamento": "33",
-        "Tempo": "333",
-        "Diretor": "33",
-        "Escritor": "33"
     }
 ]
