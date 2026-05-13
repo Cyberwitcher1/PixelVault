@@ -1,66 +1,226 @@
 [
     {
         "id": 0,
-        "Titulo": "Spider man",
-        "Lancamento": "2004",
-        "Tempo": "165",
-        "Diretor": "Ricardo",
-        "Escritor": "Rui"
+        "Titulo": "Iron Man",
+        "Lancamento": "2008",
+        "Tempo": "126",
+        "Diretor": "Jon Favreau",
+        "Escritor": "Mark Fergus"
     },
     {
         "id": 1,
-        "Titulo": "Venom",
-        "Lancamento": "2004",
-        "Tempo": "165m",
-        "Diretor": "Richard",
-        "Escritor": "Rui"
+        "Titulo": "The Incredible Hulk",
+        "Lancamento": "2008",
+        "Tempo": "112",
+        "Diretor": "Louis Leterrier",
+        "Escritor": "Zak Penn"
     },
     {
         "id": 2,
-        "Titulo": "Spider-man",
-        "Lancamento": "2001",
-        "Tempo": "165",
-        "Diretor": "Richard",
-        "Escritor": "Rui"
+        "Titulo": "Iron Man 2",
+        "Lancamento": "2010",
+        "Tempo": "124",
+        "Diretor": "Jon Favreau",
+        "Escritor": "Justin Theroux"
     },
     {
         "id": 3,
-        "Titulo": "Spider-man 3",
-        "Lancamento": "2004",
-        "Tempo": "165",
-        "Diretor": "2001",
-        "Escritor": "Pedro"
+        "Titulo": "Thor",
+        "Lancamento": "2011",
+        "Tempo": "115",
+        "Diretor": "Kenneth Branagh",
+        "Escritor": "Ashley Miller"
     },
     {
         "id": 4,
-        "Titulo": "Spider-man 4",
-        "Lancamento": "2001",
-        "Tempo": "1.65",
-        "Diretor": "Ricardo",
-        "Escritor": "Pedro"
+        "Titulo": "Captain America: The First Avenger",
+        "Lancamento": "2011",
+        "Tempo": "124",
+        "Diretor": "Joe Johnston",
+        "Escritor": "Christopher Markus"
     },
     {
         "id": 5,
-        "Titulo": "555",
-        "Lancamento": "5",
-        "Tempo": "5",
-        "Diretor": "5",
-        "Escritor": "5"
+        "Titulo": "The Avengers",
+        "Lancamento": "2012",
+        "Tempo": "143",
+        "Diretor": "Joss Whedon",
+        "Escritor": "Joss Whedon"
     },
     {
         "id": 6,
-        "Titulo": "666",
-        "Lancamento": "6",
-        "Tempo": "6",
-        "Diretor": "6",
-        "Escritor": "6"
+        "Titulo": "Iron Man 3",
+        "Lancamento": "2013",
+        "Tempo": "130",
+        "Diretor": "Shane Black",
+        "Escritor": "Shane Black"
     },
     {
         "id": 7,
-        "Titulo": "cenas",
-        "Lancamento": "cenas",
-        "Tempo": "cenas",
-        "Diretor": "cenas",
-        "Escritor": "cenas"
+        "Titulo": "Thor: The Dark World",
+        "Lancamento": "2013",
+        "Tempo": "112",
+        "Diretor": "Alan Taylor",
+        "Escritor": "Christopher Yost"
+    },
+    {
+        "id": 8,
+        "Titulo": "Captain America: The Winter Soldier",
+        "Lancamento": "2014",
+        "Tempo": "136",
+        "Diretor": "Anthony & Joe Russo",
+        "Escritor": "Christopher Markus"
+    },
+    {
+        "id": 9,
+        "Titulo": "Guardians of the Galaxy",
+        "Lancamento": "2014",
+        "Tempo": "121",
+        "Diretor": "James Gunn",
+        "Escritor": "James Gunn"
+    },
+    {
+        "id": 10,
+        "Titulo": "Avengers: Age of Ultron",
+        "Lancamento": "2015",
+        "Tempo": "141",
+        "Diretor": "Joss Whedon",
+        "Escritor": "Joss Whedon"
+    },
+    {
+        "id": 11,
+        "Titulo": "Ant-Man",
+        "Lancamento": "2015",
+        "Tempo": "117",
+        "Diretor": "Peyton Reed",
+        "Escritor": "Edgar Wright"
+    },
+    {
+        "id": 12,
+        "Titulo": "Captain America: Civil War",
+        "Lancamento": "2016",
+        "Tempo": "147",
+        "Diretor": "Anthony & Joe Russo",
+        "Escritor": "Christopher Markus"
+    },
+    {
+        "id": 13,
+        "Titulo": "Doctor Strange",
+        "Lancamento": "2016",
+        "Tempo": "115",
+        "Diretor": "Scott Derrickson",
+        "Escritor": "Jon Spaihts"
+    },
+    {
+        "id": 14,
+        "Titulo": "Guardians of the Galaxy Vol. 2",
+        "Lancamento": "2017",
+        "Tempo": "136",
+        "Diretor": "James Gunn",
+        "Escritor": "James Gunn"
+    },
+    {
+        "id": 15,
+        "Titulo": "Spider-Man: Homecoming",
+        "Lancamento": "2017",
+        "Tempo": "133",
+        "Diretor": "Jon Watts",
+        "Escritor": "Jonathan Goldstein"
+    },
+    {
+        "id": 16,
+        "Titulo": "Thor: Ragnarok",
+        "Lancamento": "2017",
+        "Tempo": "130",
+        "Diretor": "Taika Waititi",
+        "Escritor": "Eric Pearson"
+    },
+    {
+        "id": 17,
+        "Titulo": "Black Panther",
+        "Lancamento": "2018",
+        "Tempo": "134",
+        "Diretor": "Ryan Coogler",
+        "Escritor": "Ryan Coogler"
+    },
+    {
+        "id": 18,
+        "Titulo": "Avengers: Infinity War",
+        "Lancamento": "2018",
+        "Tempo": "149",
+        "Diretor": "Anthony & Joe Russo",
+        "Escritor": "Christopher Markus"
+    },
+    {
+        "id": 19,
+        "Titulo": "Ant-Man and the Wasp",
+        "Lancamento": "2018",
+        "Tempo": "118",
+        "Diretor": "Peyton Reed",
+        "Escritor": "Chris McKenna"
+    },
+    {
+        "id": 20,
+        "Titulo": "Captain Marvel",
+        "Lancamento": "2019",
+        "Tempo": "123",
+        "Diretor": "Anna Boden",
+        "Escritor": "Anna Boden"
+    },
+    {
+        "id": 21,
+        "Titulo": "Avengers: Endgame",
+        "Lancamento": "2019",
+        "Tempo": "181",
+        "Diretor": "Anthony & Joe Russo",
+        "Escritor": "Christopher Markus"
+    },
+    {
+        "id": 22,
+        "Titulo": "Spider-Man: Far From Home",
+        "Lancamento": "2019",
+        "Tempo": "129",
+        "Diretor": "Jon Watts",
+        "Escritor": "Chris McKenna"
+    },
+    {
+        "id": 23,
+        "Titulo": "Black Widow",
+        "Lancamento": "2021",
+        "Tempo": "134",
+        "Diretor": "Cate Shortland",
+        "Escritor": "Eric Pearson"
+    },
+    {
+        "id": 24,
+        "Titulo": "Shang-Chi and the Legend of the Ten Rings",
+        "Lancamento": "2021",
+        "Tempo": "132",
+        "Diretor": "Destin Daniel Cretton",
+        "Escritor": "Dave Callaham"
+    },
+    {
+        "id": 25,
+        "Titulo": "Eternals",
+        "Lancamento": "2021",
+        "Tempo": "156",
+        "Diretor": "Chloé Zhao",
+        "Escritor": "Chloé Zhao"
+    },
+    {
+        "id": 26,
+        "Titulo": "Spider-Man: No Way Home",
+        "Lancamento": "2021",
+        "Tempo": "148",
+        "Diretor": "Jon Watts",
+        "Escritor": "Chris McKenna"
+    },
+    {
+        "id": 27,
+        "Titulo": "Doctor Strange in the Multiverse of Madness",
+        "Lancamento": "2022",
+        "Tempo": "126",
+        "Diretor": "Sam Raimi",
+        "Escritor": "Michael Waldron"
     }
 ]

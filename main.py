@@ -178,19 +178,13 @@ while (menu==1):
                 print("Tem que escrever Sim ou Não!")        
     if section == "5":
         target = input("Escreva o que quer procurar: ")
-        
-        
-        with open('data.json', 'r') as file:
-            data_base = json.load(file)
-            base_nova = data_base
-            print(base_nova)
-        file.close()
+
 
 
 
 
     if section == "6":
-            def search(list, find):
+            def linear_search(list, find):
                 i = 0
                 """ Aqui da uma volta no primeiro dict e outra volta no segundo dict"""
                 for dict in list:
@@ -208,11 +202,48 @@ while (menu==1):
 
                 search_list = data_base
                 find = input("Escreva o que quer procurar: ")
-                search(search_list, find)
+                linear_search(search_list, find)
             file.close()
     
     if section == "7":
-        print(2)
+        sequence_a = []
+
+        with open('data.json', 'r') as file:
+            data_base = json.load(file)
+
+            filter = "id"
+
+            for dict in data_base:
+                sequence_a.append(dict[filter])
+                print(sequence_a)
+
+        def binary_search(sequence, item):
+            begin_index = 0
+            end_index = len(sequence) - 1
+
+            while begin_index <= end_index:
+                """Aqui ele "corta" e cria o midpoint"""
+                midpoint = begin_index + (end_index - begin_index) // 2
+                """Aqui ele pega no midpoint criado e mete na variavel midpoint_value"""
+                midpoint_value = sequence[midpoint]
+                print(f"Midpoint  is...", midpoint_value) 
+                if midpoint_value == item:
+                    print("Target found!")
+                    return midpoint
+                elif item < midpoint_value:
+                    print("The target is before midpoint...")
+                    end_index = midpoint - 1
+                    print("Changing end_index...", end_index)
+                else:
+                    print("The target is after midpoint...")
+                    """aqui o begin_index deixa de ser o inicio da lista e passa a ser o inicio do midpoint+1"""
+                    begin_index = midpoint + 1
+                    print(f"Changing begin index...", begin_index)
+            return None
+        
+    item_a = int(input("Escreva o valor do id que pretende: "))
+    binary_search(sequence_a, item_a)
+
     if section == "8":
         menu == 0
         break
