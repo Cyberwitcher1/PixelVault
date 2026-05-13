@@ -1,7 +1,6 @@
 import json
 import os
-from searches import binary_search
-from searches import linear_search
+from searches import binary_search, linear_search, alphabetic_order
 from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console
 
 menu=1
@@ -9,19 +8,18 @@ menu=1
 while (menu==1):
     print("|========|Menu|========")
     print("1 - Add a movie")
-    print("2 - Update")
+    print("2 - Update a movie")
     print("3 - Remove a movie")
     print("4 - Show all movies")
     print("5 - Show all movies by alphabetic order")
     print("6 - Linear search")
     print("7 - Binary search (in ordered data)")
     print("8 - Exit")
-    section = input("Please fellow hero, choose one of the sections: ")
+    section = input("Please noble hero, choose one of the sections: ")
     data_base = []
     new_base = []
     new_movie = {}
     update_movie = {}
-
 
 ################################# - M E N U - ########################################
             
@@ -120,8 +118,6 @@ while (menu==1):
                 clean_console()
                 print("List of movies with the applied filter:")
 
-
-
                 with open('data.json', 'r') as file:
                     data_base = json.load(file)
                 for dict in data_base:
@@ -134,12 +130,11 @@ while (menu==1):
         clean_console()
                 
     if section == "5":
-        target = input("Write what you are looking for: ")
-
-        with open('data.json', 'r+') as file:
-            data_base = json.load(file)        
-
-
+        clean_console()
+        alphabetic_order()
+        input("\nPress enter to exit...")
+        clean_console()
+                
     if section == "6":
             clean_console()       
             with open('data.json', 'r') as file:
@@ -167,7 +162,7 @@ while (menu==1):
 
     if section == "8":
         clean_console()
-        print("Thank you for your visit!")
+        print("Until a next time valiant hero! With great bifanas, comes great responsibility - Uncle Ben")
         input()
         menu == 0
         break

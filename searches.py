@@ -41,4 +41,20 @@ def linear_search(list, find):
     if j == 0:
         print("Nothing was found...")
 
+def alphabetic_order():
+        list_titles = []        
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            for t in data_base:
+                list_titles.append(t["Title"])
+   
+
+            for i in range(len(list_titles)):
+                for j in range(0, len(list_titles) - i - 1):
+                    if list_titles[j] > list_titles[j + 1]:
+                        list_titles[j], list_titles[j + 1] = list_titles[j + 1], list_titles[j]
+
+            print("List of titles organized alphabetically: \n")
+            for w in list_titles:
+                print(w)    
 
