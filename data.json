@@ -1,226 +1,234 @@
 [
     {
         "id": 0,
-        "Titulo": "Iron Man",
-        "Lancamento": "2008",
-        "Tempo": "126",
-        "Diretor": "Jon Favreau",
-        "Escritor": "Mark Fergus"
+        "Title": "Iron Man",
+        "Release_date": "2008",
+        "Movie_length": "126",
+        "Director": "Jon Favreau",
+        "Writer": "Mark Fergus"
     },
     {
         "id": 1,
-        "Titulo": "The Incredible Hulk",
-        "Lancamento": "2008",
-        "Tempo": "112",
-        "Diretor": "Louis Leterrier",
-        "Escritor": "Zak Penn"
+        "Title": "The Incredible Hulk",
+        "Release_date": "2008",
+        "Movie_length": "112",
+        "Director": "Louis Leterrier",
+        "Writer": "Zak Penn"
     },
     {
         "id": 2,
-        "Titulo": "Iron Man 2",
-        "Lancamento": "2010",
-        "Tempo": "124",
-        "Diretor": "Jon Favreau",
-        "Escritor": "Justin Theroux"
+        "Title": "Iron Man 2",
+        "Release_date": "2010",
+        "Movie_length": "124",
+        "Director": "Jon Favreau",
+        "Writer": "Justin Theroux"
     },
     {
         "id": 3,
-        "Titulo": "Thor",
-        "Lancamento": "2011",
-        "Tempo": "115",
-        "Diretor": "Kenneth Branagh",
-        "Escritor": "Ashley Miller"
+        "Title": "30",
+        "Release_date": "30",
+        "Movie_length": "30",
+        "Director": "30",
+        "Writer": "30"
     },
     {
         "id": 4,
-        "Titulo": "Captain America: The First Avenger",
-        "Lancamento": "2011",
-        "Tempo": "124",
-        "Diretor": "Joe Johnston",
-        "Escritor": "Christopher Markus"
+        "Title": "Captain America: The First Avenger",
+        "Release_date": "2011",
+        "Movie_length": "124",
+        "Director": "Joe Johnston",
+        "Writer": "Christopher Markus"
     },
     {
         "id": 5,
-        "Titulo": "The Avengers",
-        "Lancamento": "2012",
-        "Tempo": "143",
-        "Diretor": "Joss Whedon",
-        "Escritor": "Joss Whedon"
+        "Title": "The Avengers",
+        "Release_date": "2012",
+        "Movie_length": "143",
+        "Director": "Joss Whedon",
+        "Writer": "Joss Whedon"
     },
     {
         "id": 6,
-        "Titulo": "Iron Man 3",
-        "Lancamento": "2013",
-        "Tempo": "130",
-        "Diretor": "Shane Black",
-        "Escritor": "Shane Black"
+        "Title": "Iron Man 3",
+        "Release_date": "2013",
+        "Movie_length": "130",
+        "Director": "Shane Black",
+        "Writer": "Shane Black"
     },
     {
         "id": 7,
-        "Titulo": "Thor: The Dark World",
-        "Lancamento": "2013",
-        "Tempo": "112",
-        "Diretor": "Alan Taylor",
-        "Escritor": "Christopher Yost"
+        "Title": "Thor: The Dark World",
+        "Release_date": "2013",
+        "Movie_length": "112",
+        "Director": "Alan Taylor",
+        "Writer": "Christopher Yost"
     },
     {
         "id": 8,
-        "Titulo": "Captain America: The Winter Soldier",
-        "Lancamento": "2014",
-        "Tempo": "136",
-        "Diretor": "Anthony & Joe Russo",
-        "Escritor": "Christopher Markus"
+        "Title": "Captain America: The Winter Soldier",
+        "Release_date": "2014",
+        "Movie_length": "136",
+        "Director": "Anthony & Joe Russo",
+        "Writer": "Christopher Markus"
     },
     {
         "id": 9,
-        "Titulo": "Guardians of the Galaxy",
-        "Lancamento": "2014",
-        "Tempo": "121",
-        "Diretor": "James Gunn",
-        "Escritor": "James Gunn"
+        "Title": "Guardians of the Galaxy",
+        "Release_date": "2014",
+        "Movie_length": "121",
+        "Director": "James Gunn",
+        "Writer": "James Gunn"
     },
     {
         "id": 10,
-        "Titulo": "Avengers: Age of Ultron",
-        "Lancamento": "2015",
-        "Tempo": "141",
-        "Diretor": "Joss Whedon",
-        "Escritor": "Joss Whedon"
+        "Title": "Avengers: Age of Ultron",
+        "Release_date": "2015",
+        "Movie_length": "141",
+        "Director": "Joss Whedon",
+        "Writer": "Joss Whedon"
     },
     {
         "id": 11,
-        "Titulo": "Ant-Man",
-        "Lancamento": "2015",
-        "Tempo": "117",
-        "Diretor": "Peyton Reed",
-        "Escritor": "Edgar Wright"
+        "Title": "Ant-Man",
+        "Release_date": "2015",
+        "Movie_length": "117",
+        "Director": "Peyton Reed",
+        "Writer": "Edgar Wright"
     },
     {
         "id": 12,
-        "Titulo": "Captain America: Civil War",
-        "Lancamento": "2016",
-        "Tempo": "147",
-        "Diretor": "Anthony & Joe Russo",
-        "Escritor": "Christopher Markus"
+        "Title": "Captain America: Civil War",
+        "Release_date": "2016",
+        "Movie_length": "147",
+        "Director": "Anthony & Joe Russo",
+        "Writer": "Christopher Markus"
     },
     {
         "id": 13,
-        "Titulo": "Doctor Strange",
-        "Lancamento": "2016",
-        "Tempo": "115",
-        "Diretor": "Scott Derrickson",
-        "Escritor": "Jon Spaihts"
+        "Title": "Doctor Strange",
+        "Release_date": "2016",
+        "Movie_length": "115",
+        "Director": "Scott Derrickson",
+        "Writer": "Jon Spaihts"
     },
     {
         "id": 14,
-        "Titulo": "Guardians of the Galaxy Vol. 2",
-        "Lancamento": "2017",
-        "Tempo": "136",
-        "Diretor": "James Gunn",
-        "Escritor": "James Gunn"
+        "Title": "Guardians of the Galaxy Vol. 2",
+        "Release_date": "2017",
+        "Movie_length": "136",
+        "Director": "James Gunn",
+        "Writer": "James Gunn"
     },
     {
         "id": 15,
-        "Titulo": "Spider-Man: Homecoming",
-        "Lancamento": "2017",
-        "Tempo": "133",
-        "Diretor": "Jon Watts",
-        "Escritor": "Jonathan Goldstein"
+        "Title": "Spider-Man: Homecoming",
+        "Release_date": "2017",
+        "Movie_length": "133",
+        "Director": "Jon Watts",
+        "Writer": "Jonathan Goldstein"
     },
     {
         "id": 16,
-        "Titulo": "Thor: Ragnarok",
-        "Lancamento": "2017",
-        "Tempo": "130",
-        "Diretor": "Taika Waititi",
-        "Escritor": "Eric Pearson"
+        "Title": "Thor: Ragnarok",
+        "Release_date": "2017",
+        "Movie_length": "130",
+        "Director": "Taika Waititi",
+        "Writer": "Eric Pearson"
     },
     {
         "id": 17,
-        "Titulo": "Black Panther",
-        "Lancamento": "2018",
-        "Tempo": "134",
-        "Diretor": "Ryan Coogler",
-        "Escritor": "Ryan Coogler"
+        "Title": "Black Panther",
+        "Release_date": "2018",
+        "Movie_length": "134",
+        "Director": "Ryan Coogler",
+        "Writer": "Ryan Coogler"
     },
     {
         "id": 18,
-        "Titulo": "Avengers: Infinity War",
-        "Lancamento": "2018",
-        "Tempo": "149",
-        "Diretor": "Anthony & Joe Russo",
-        "Escritor": "Christopher Markus"
+        "Title": "Avengers: Infinity War",
+        "Release_date": "2018",
+        "Movie_length": "149",
+        "Director": "Anthony & Joe Russo",
+        "Writer": "Christopher Markus"
     },
     {
         "id": 19,
-        "Titulo": "Ant-Man and the Wasp",
-        "Lancamento": "2018",
-        "Tempo": "118",
-        "Diretor": "Peyton Reed",
-        "Escritor": "Chris McKenna"
+        "Title": "Ant-Man and the Wasp",
+        "Release_date": "2018",
+        "Movie_length": "118",
+        "Director": "Peyton Reed",
+        "Writer": "Chris McKenna"
     },
     {
         "id": 20,
-        "Titulo": "Captain Marvel",
-        "Lancamento": "2019",
-        "Tempo": "123",
-        "Diretor": "Anna Boden",
-        "Escritor": "Anna Boden"
+        "Title": "Captain Marvel",
+        "Release_date": "2019",
+        "Movie_length": "123",
+        "Director": "Anna Boden",
+        "Writer": "Anna Boden"
     },
     {
         "id": 21,
-        "Titulo": "Avengers: Endgame",
-        "Lancamento": "2019",
-        "Tempo": "181",
-        "Diretor": "Anthony & Joe Russo",
-        "Escritor": "Christopher Markus"
+        "Title": "Avengers: Endgame",
+        "Release_date": "2019",
+        "Movie_length": "181",
+        "Director": "Anthony & Joe Russo",
+        "Writer": "Christopher Markus"
     },
     {
         "id": 22,
-        "Titulo": "Spider-Man: Far From Home",
-        "Lancamento": "2019",
-        "Tempo": "129",
-        "Diretor": "Jon Watts",
-        "Escritor": "Chris McKenna"
+        "Title": "Spider-Man: Far From Home",
+        "Release_date": "2019",
+        "Movie_length": "129",
+        "Director": "Jon Watts",
+        "Writer": "Chris McKenna"
     },
     {
         "id": 23,
-        "Titulo": "Black Widow",
-        "Lancamento": "2021",
-        "Tempo": "134",
-        "Diretor": "Cate Shortland",
-        "Escritor": "Eric Pearson"
+        "Title": "Black Widow",
+        "Release_date": "2021",
+        "Movie_length": "134",
+        "Director": "Cate Shortland",
+        "Writer": "Eric Pearson"
     },
     {
         "id": 24,
-        "Titulo": "Shang-Chi and the Legend of the Ten Rings",
-        "Lancamento": "2021",
-        "Tempo": "132",
-        "Diretor": "Destin Daniel Cretton",
-        "Escritor": "Dave Callaham"
+        "Title": "Shang-Chi and the Legend of the Ten Rings",
+        "Release_date": "2021",
+        "Movie_length": "132",
+        "Director": "Destin Daniel Cretton",
+        "Writer": "Dave Callaham"
     },
     {
         "id": 25,
-        "Titulo": "Eternals",
-        "Lancamento": "2021",
-        "Tempo": "156",
-        "Diretor": "Chloé Zhao",
-        "Escritor": "Chloé Zhao"
+        "Title": "Eternals",
+        "Release_date": "2021",
+        "Movie_length": "156",
+        "Director": "Zhao",
+        "Writer": "Zhao"
     },
     {
         "id": 26,
-        "Titulo": "Spider-Man: No Way Home",
-        "Lancamento": "2021",
-        "Tempo": "148",
-        "Diretor": "Jon Watts",
-        "Escritor": "Chris McKenna"
+        "Title": "Spider-Man: No Way Home",
+        "Release_date": "2021",
+        "Movie_length": "148",
+        "Director": "Jon Watts",
+        "Writer": "Chris McKenna"
     },
     {
         "id": 27,
-        "Titulo": "Doctor Strange in the Multiverse of Madness",
-        "Lancamento": "2022",
-        "Tempo": "126",
-        "Diretor": "Sam Raimi",
-        "Escritor": "Michael Waldron"
+        "Title": "Doctor Strange in the Multiverse of Madness",
+        "Release_date": "2022",
+        "Movie_length": "126",
+        "Director": "Sam Raimi",
+        "Writer": "Michael Waldron"
+    },
+    {
+        "id": 28,
+        "Title": "Novo",
+        "Release_date": "novo",
+        "Movie_length": "novo2",
+        "Director": "novo2",
+        "Writer": "novo2"
     }
 ]

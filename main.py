@@ -1,78 +1,32 @@
 import json
+import os
+from searches import binary_search
+from searches import linear_search
+from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console
 
 menu=1
 
 while (menu==1):
     print("|========|Menu|========")
-    print("1 - Adicionar um filme")
-    print("2 - Atualizar um filme")
-    print("3 - Remover um filme")
-    print("4 - Mostrar todos os filmes")
-    print("5 - Mostrar todos os filmes por ordem alfabética")
-    print("6 - Pesquisa linear")
-    print("7 - Pesquisa binária (em dados ordenados)")
-    print("8 - Sair")
-    section = input("Escolha uma das opções: ")
+    print("1 - Add a movie")
+    print("2 - Update")
+    print("3 - Remove a movie")
+    print("4 - Show all movies")
+    print("5 - Show all movies by alphabetic order")
+    print("6 - Linear search")
+    print("7 - Binary search (in ordered data)")
+    print("8 - Exit")
+    section = input("Please fellow hero, choose one of the sections: ")
     data_base = []
     new_base = []
     new_movie = {}
+    update_movie = {}
 
-    def title_id():
-        print("Lista de todos os filmes por id:")
-        with open('data.json', 'r+') as file:
-            mainList = json.load(file)
-
-            for i in mainList:
-                print(i["id"], i["Titulo"])
-        file.close()
-
-    def newRegistry():
-        new_title = input("O título: ")
-        new_movie["Titulo"] = new_title
-
-        movie_release = input("O ano de lançamento: ")
-        new_movie["Lancamento"] = movie_release
-
-        movie_length = input("A longevidade: ")
-        new_movie["Tempo"] = movie_length
-
-        movie_diretor = input("O diretor do filme: ")
-        new_movie["Diretor"] = movie_diretor
-
-        movie_writer = input("O escritor do filme: ")
-        new_movie["Escritor"] = movie_writer
-        
-    def deleteJson():
-        newList = []
-        with open('data.json', 'r+') as file:
-            mainList = json.load(file)
-            del mainList[delete_movie]
-            newList = mainList
-
-            newList = [{"id": i, **d} for i, d in enumerate(newList)]
-            file.seek(0)
-        file.close()
-
-        with open('data.json', 'w+') as file:
-            json.dump(newList, file, indent=4)
-        file.close()
-
-
-    def orgJson():
-        # Carrega a informação
-        with open('data.json', 'r+') as file:
-            data_base = json.load(file)
-            #Enumera cada dicionario
-            data_base = [{**d,"id": i,} for i, d in enumerate(data_base)]
-                
-            # 3. vai para o fim da lista e da o dump
-            file.seek(0)
-            json.dump(data_base, file, indent=4)
-            file.close()
 
 ################################# - M E N U - ########################################
             
-    if section == "1":        
+    if section == "1":
+        clean_console()
         def writeJson():
             # Carrega a informação
             with open('data.json', 'r+') as file:
@@ -89,85 +43,84 @@ while (menu==1):
                 json.dump(data_base, file, indent=4)
                 file.close()
         # Registo novo
-        newRegistry()
+        newRegistry(new_movie)
         writeJson()
+        clean_console()
+        print("New movie added!")
+        input("Press enter to exit...")
+        clean_console()
         
     """ ATUALIZAR """
     if section == "2":
-        
+            clean_console()
             title_id()
 
             with open('data.json', 'r+') as file:
                 data_base = json.load(file)
-                update_dict = int(input("Qual é o id/filme que quer atualizar?"))
-                print(data_base[update_dict])
+                update_dict = int(input("What movie/id do you want to update?"))
+                clean_console()
                 file.close()
                             
 
-                
-            def updateRegistry():
-                new_movie["id"] = update_dict
-
-                new_title = input("O título: ")
-                new_movie["Titulo"] = new_title
-
-                movie_release = input("O ano de lançamento: ")
-                new_movie["Lancamento"] = movie_release
-
-                movie_length = input("A longevidade: ")
-                new_movie["Tempo"] = movie_length
-
-                movie_diretor = input("O diretor do filme: ")
-                new_movie["Diretor"] = movie_diretor
-
-                movie_writer = input("O escritor do filme: ")
-                new_movie["Escritor"] = movie_writer
-
-
-            updateRegistry()
+            updateRegistry(update_movie, update_dict)
 
             with open('data.json', 'r+') as file:
                 data_base = json.load(file)
-                data_base[update_dict] = new_movie
+                data_base[update_dict] = update_movie
                 new_base = data_base
-                print(new_base)
                 file.close()
             with open ('data.json', 'w') as file:
-                print(new_base)
                 json.dump(new_base, file, indent=4)
+                clean_console()
+                print("Update sucessful!")
+                input("Press enter to exit...")
                 file.close()
+                clean_console()
 
     """ REMOVER """
     if section == "3":
+        clean_console()
         title_id()
-        delete_movie = int(input("Escreva o id/filme que quer apagar: "))
+        delete_movie = int(input("Which id do you want to remove?: "))
 
         while True:
-            del_confirmation = input("Quer MESMO apagar? Se sim, escreva: 'EUQUEROAPAGAR' ou se enganou-se escreva 'NAO': ")
-            if del_confirmation == "EUQUEROAPAGAR":
-                deleteJson()
+            del_confirmation = input("Are you sure that you want to delete it? If yes, write: 'IAMSURE' if you wrote by mistake, write: 'NO': ")
+            if del_confirmation == "IAMSURE":
+                deleteJson(delete_movie)
                 orgJson()
-                print("Delete concluido!")
+                clean_console()
+                print("Delete completed!")
+                input("Click enter to exit...")
+                clean_console()
                 break
             elif del_confirmation == "NAO":
-                print("O dicionário não foi deletado...")
+                print("The dictionary wasnt deleted...")
                 break
             else:
-                print("Input inválido!")
+                print("Invalid Input!")
+
+
 
     """" MOSTRAR TUDO """
     if section == "4":
+        clean_console()
         while True:
-            esc = input("Quer algum filtro? (SIM/NAO)")
+            esc = input("Do you want any filter?(YES/NO): ")
+            clean_console()
+
             # SEM FILTRO
-            if esc == "NAO" or esc == "nao":
+            if esc == "NO" or esc == "no":
                 with open('data.json', 'r') as file:
                     data_base = json.load(file)
                 print(data_base)
                 break
             # COM FILTRO    
-            elif esc == "SIM" or esc == "sim":
-                filter = input("Que filtro quer aplicar(Título,Lancamento,Tempo,Diretor,Escritor): ")
+            elif esc == "YES" or esc == "yes":
+                filter = input("What filter do you want to apply(Title, Release_date, Movie_Length, Director, Writer): ")
+                clean_console()
+                print("List of movies with the applied filter:")
+
+
 
                 with open('data.json', 'r') as file:
                     data_base = json.load(file)
@@ -175,37 +128,30 @@ while (menu==1):
                     print(dict[filter])
                 break
             else:
-                print("Tem que escrever Sim ou Não!")        
+                print("Invalid input You have to write yes or no...!")
+
+        input("\nClick enter to exit...")
+        clean_console()
+                
     if section == "5":
-        target = input("Escreva o que quer procurar: ")
+        target = input("Write what you are looking for: ")
 
-
-
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)        
 
 
     if section == "6":
-            def linear_search(list, find):
-                i = 0
-                """ Aqui da uma volta no primeiro dict e outra volta no segundo dict"""
-                for dict in list:
-                    for dict_values in dict.values():
-                        if dict_values == find:
-                            i = i + 1
-                            print(find + f" was found on the {i}º dictionary")
-                            
-                            break
-                        else:
-                            continue
-                        
+            clean_console()       
             with open('data.json', 'r') as file:
                 data_base = json.load(file)
 
                 search_list = data_base
-                find = input("Escreva o que quer procurar: ")
+                find = input("Write what you are looking for: ")
                 linear_search(search_list, find)
             file.close()
     
     if section == "7":
+        clean_console()
         sequence_a = []
 
         with open('data.json', 'r') as file:
@@ -215,36 +161,14 @@ while (menu==1):
 
             for dict in data_base:
                 sequence_a.append(dict[filter])
-                print(sequence_a)
-
-        def binary_search(sequence, item):
-            begin_index = 0
-            end_index = len(sequence) - 1
-
-            while begin_index <= end_index:
-                """Aqui ele "corta" e cria o midpoint"""
-                midpoint = begin_index + (end_index - begin_index) // 2
-                """Aqui ele pega no midpoint criado e mete na variavel midpoint_value"""
-                midpoint_value = sequence[midpoint]
-                print(f"Midpoint  is...", midpoint_value) 
-                if midpoint_value == item:
-                    print("Target found!")
-                    return midpoint
-                elif item < midpoint_value:
-                    print("The target is before midpoint...")
-                    end_index = midpoint - 1
-                    print("Changing end_index...", end_index)
-                else:
-                    print("The target is after midpoint...")
-                    """aqui o begin_index deixa de ser o inicio da lista e passa a ser o inicio do midpoint+1"""
-                    begin_index = midpoint + 1
-                    print(f"Changing begin index...", begin_index)
-            return None
-        
-    item_a = int(input("Escreva o valor do id que pretende: "))
-    binary_search(sequence_a, item_a)
+                
+        item_a = int(input("Choose the id that you want: "))
+        binary_search(sequence_a, item_a)
 
     if section == "8":
+        clean_console()
+        print("Thank you for your visit!")
+        input()
         menu == 0
         break
 
