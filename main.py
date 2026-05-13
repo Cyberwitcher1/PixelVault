@@ -1,6 +1,4 @@
 import json
-import string
-import re
 
 menu=1
 
@@ -15,7 +13,6 @@ while (menu==1):
     print("7 - Pesquisa binária (em dados ordenados)")
     print("8 - Sair")
     section = input("Escolha uma das opções: ")
-
     data_base = []
     new_base = []
     new_movie = {}
@@ -44,6 +41,21 @@ while (menu==1):
 
         movie_writer = input("O escritor do filme: ")
         new_movie["Escritor"] = movie_writer
+        
+    def deleteJson():
+        newList = []
+        with open('data.json', 'r+') as file:
+            mainList = json.load(file)
+            del mainList[delete_movie]
+            newList = mainList
+
+            newList = [{"id": i, **d} for i, d in enumerate(newList)]
+            file.seek(0)
+        file.close()
+
+        with open('data.json', 'w+') as file:
+            json.dump(newList, file, indent=4)
+        file.close()
 
 
     def orgJson():
@@ -52,13 +64,13 @@ while (menu==1):
             data_base = json.load(file)
             #Enumera cada dicionario
             data_base = [{**d,"id": i,} for i, d in enumerate(data_base)]
-
-            print(data_base)
                 
             # 3. vai para o fim da lista e da o dump
             file.seek(0)
             json.dump(data_base, file, indent=4)
             file.close()
+
+################################# - M E N U - ########################################
             
     if section == "1":        
         def writeJson():
@@ -83,26 +95,6 @@ while (menu==1):
     """ ATUALIZAR """
     if section == "2":
         
-
-        while True:
-            password = "admin123"
-
-            login_username = input("Insert the admin name: ")
-            login_password = input("Insert the admin password: ")
-            attempts = 3
-
-            if re.search("[a-z]+", password) is None:
-                print('At least one character must be in the range [a-z]')
-
-            if re.search("[A-Z]+", password) is None:
-                print('At least one character must be in the range [A-Z]')
-
-            if re.search("[0-9]+", password) is None:
-                print('At least one character must be in the range [0-9]')
-
-            if re.search("[@#$]+", password) is None:
-                print('At least one character must be in the range [a@#$]')
-
             title_id()
 
             with open('data.json', 'r+') as file:
@@ -148,25 +140,20 @@ while (menu==1):
     """ REMOVER """
     if section == "3":
         title_id()
-        def deleteJson():
-            newList = []
+        delete_movie = int(input("Escreva o id/filme que quer apagar: "))
 
-            delete_movie = int(input("Escreva o id/filme que quer apagar: "))
-            with open('data.json', 'r+') as file:
-                mainList = json.load(file)
-                del mainList[delete_movie]
-                newList = mainList
-
-                newList = [{"id": i, **d} for i, d in enumerate(newList)]
-                file.seek(0)
-
-
-            with open('data.json', 'w+') as file:
-                json.dump(newList, file, indent=4)
-
-        deleteJson()
-        orgJson()
-
+        while True:
+            del_confirmation = input("Quer MESMO apagar? Se sim, escreva: 'EUQUEROAPAGAR' ou se enganou-se escreva 'NAO': ")
+            if del_confirmation == "EUQUEROAPAGAR":
+                deleteJson()
+                orgJson()
+                print("Delete concluido!")
+                break
+            elif del_confirmation == "NAO":
+                print("O dicionário não foi deletado...")
+                break
+            else:
+                print("Input inválido!")
 
     """" MOSTRAR TUDO """
     if section == "4":
@@ -190,18 +177,42 @@ while (menu==1):
             else:
                 print("Tem que escrever Sim ou Não!")        
     if section == "5":
-        print(5)
+        target = input("Escreva o que quer procurar: ")
+        
+        
+        with open('data.json', 'r') as file:
+            data_base = json.load(file)
+            base_nova = data_base
+            print(base_nova)
+        file.close()
+
+
+
 
     if section == "6":
-        print(6)
+            def search(list, find):
+                i = 0
+                """ Aqui da uma volta no primeiro dict e outra volta no segundo dict"""
+                for dict in list:
+                    for dict_values in dict.values():
+                        if dict_values == find:
+                            i = i + 1
+                            print(find + f" was found on the {i}º dictionary")
+                            
+                            break
+                        else:
+                            continue
+                        
+            with open('data.json', 'r') as file:
+                data_base = json.load(file)
 
-
-
+                search_list = data_base
+                find = input("Escreva o que quer procurar: ")
+                search(search_list, find)
+            file.close()
+    
     if section == "7":
         print(2)
-
-
-
     if section == "8":
         menu == 0
         break
