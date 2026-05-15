@@ -17,22 +17,6 @@
     },
     {
         "id": 2,
-        "Title": "Iron Man 2",
-        "Release_date": "2010",
-        "Movie_length": "124",
-        "Director": "Jon Favreau",
-        "Writer": "Justin Theroux"
-    },
-    {
-        "id": 3,
-        "Title": "30",
-        "Release_date": "30",
-        "Movie_length": "30",
-        "Director": "30",
-        "Writer": "30"
-    },
-    {
-        "id": 4,
         "Title": "Captain America: The First Avenger",
         "Release_date": "2011",
         "Movie_length": "124",
@@ -40,7 +24,7 @@
         "Writer": "Christopher Markus"
     },
     {
-        "id": 5,
+        "id": 3,
         "Title": "The Avengers",
         "Release_date": "2012",
         "Movie_length": "143",
@@ -48,7 +32,7 @@
         "Writer": "Joss Whedon"
     },
     {
-        "id": 6,
+        "id": 4,
         "Title": "Iron Man 3",
         "Release_date": "2013",
         "Movie_length": "130",
@@ -56,7 +40,7 @@
         "Writer": "Shane Black"
     },
     {
-        "id": 7,
+        "id": 5,
         "Title": "Thor: The Dark World",
         "Release_date": "2013",
         "Movie_length": "112",
@@ -64,15 +48,15 @@
         "Writer": "Christopher Yost"
     },
     {
-        "id": 8,
+        "id": 6,
         "Title": "Captain America: The Winter Soldier",
         "Release_date": "2014",
         "Movie_length": "136",
-        "Director": "Anthony & Joe Russo",
+        "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
     },
     {
-        "id": 9,
+        "id": 7,
         "Title": "Guardians of the Galaxy",
         "Release_date": "2014",
         "Movie_length": "121",
@@ -80,7 +64,7 @@
         "Writer": "James Gunn"
     },
     {
-        "id": 10,
+        "id": 8,
         "Title": "Avengers: Age of Ultron",
         "Release_date": "2015",
         "Movie_length": "141",
@@ -88,7 +72,7 @@
         "Writer": "Joss Whedon"
     },
     {
-        "id": 11,
+        "id": 9,
         "Title": "Ant-Man",
         "Release_date": "2015",
         "Movie_length": "117",
@@ -96,15 +80,15 @@
         "Writer": "Edgar Wright"
     },
     {
-        "id": 12,
+        "id": 10,
         "Title": "Captain America: Civil War",
         "Release_date": "2016",
         "Movie_length": "147",
-        "Director": "Anthony & Joe Russo",
+        "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
     },
     {
-        "id": 13,
+        "id": 11,
         "Title": "Doctor Strange",
         "Release_date": "2016",
         "Movie_length": "115",
@@ -112,7 +96,7 @@
         "Writer": "Jon Spaihts"
     },
     {
-        "id": 14,
+        "id": 12,
         "Title": "Guardians of the Galaxy Vol. 2",
         "Release_date": "2017",
         "Movie_length": "136",
@@ -120,7 +104,7 @@
         "Writer": "James Gunn"
     },
     {
-        "id": 15,
+        "id": 13,
         "Title": "Spider-Man: Homecoming",
         "Release_date": "2017",
         "Movie_length": "133",
@@ -128,7 +112,7 @@
         "Writer": "Jonathan Goldstein"
     },
     {
-        "id": 16,
+        "id": 14,
         "Title": "Thor: Ragnarok",
         "Release_date": "2017",
         "Movie_length": "130",
@@ -136,7 +120,7 @@
         "Writer": "Eric Pearson"
     },
     {
-        "id": 17,
+        "id": 15,
         "Title": "Black Panther",
         "Release_date": "2018",
         "Movie_length": "134",
@@ -144,15 +128,15 @@
         "Writer": "Ryan Coogler"
     },
     {
-        "id": 18,
+        "id": 16,
         "Title": "Avengers: Infinity War",
         "Release_date": "2018",
         "Movie_length": "149",
-        "Director": "Anthony & Joe Russo",
+        "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
     },
     {
-        "id": 19,
+        "id": 17,
         "Title": "Ant-Man and the Wasp",
         "Release_date": "2018",
         "Movie_length": "118",
@@ -160,7 +144,7 @@
         "Writer": "Chris McKenna"
     },
     {
-        "id": 20,
+        "id": 18,
         "Title": "Captain Marvel",
         "Release_date": "2019",
         "Movie_length": "123",
@@ -168,15 +152,15 @@
         "Writer": "Anna Boden"
     },
     {
-        "id": 21,
+        "id": 19,
         "Title": "Avengers: Endgame",
         "Release_date": "2019",
         "Movie_length": "181",
-        "Director": "Anthony & Joe Russo",
+        "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
     },
     {
-        "id": 22,
+        "id": 20,
         "Title": "Spider-Man: Far From Home",
         "Release_date": "2019",
         "Movie_length": "129",
@@ -184,7 +168,7 @@
         "Writer": "Chris McKenna"
     },
     {
-        "id": 23,
+        "id": 21,
         "Title": "Black Widow",
         "Release_date": "2021",
         "Movie_length": "134",
@@ -192,7 +176,7 @@
         "Writer": "Eric Pearson"
     },
     {
-        "id": 24,
+        "id": 22,
         "Title": "Shang-Chi and the Legend of the Ten Rings",
         "Release_date": "2021",
         "Movie_length": "132",
@@ -200,7 +184,7 @@
         "Writer": "Dave Callaham"
     },
     {
-        "id": 25,
+        "id": 23,
         "Title": "Eternals",
         "Release_date": "2021",
         "Movie_length": "156",
@@ -208,7 +192,7 @@
         "Writer": "Zhao"
     },
     {
-        "id": 26,
+        "id": 24,
         "Title": "Spider-Man: No Way Home",
         "Release_date": "2021",
         "Movie_length": "148",
@@ -216,19 +200,11 @@
         "Writer": "Chris McKenna"
     },
     {
-        "id": 27,
+        "id": 25,
         "Title": "Doctor Strange in the Multiverse of Madness",
         "Release_date": "2022",
         "Movie_length": "126",
         "Director": "Sam Raimi",
         "Writer": "Michael Waldron"
-    },
-    {
-        "id": 28,
-        "Title": "Novo",
-        "Release_date": "novo",
-        "Movie_length": "novo2",
-        "Director": "novo2",
-        "Writer": "novo2"
     }
 ]

@@ -1,7 +1,7 @@
 import json
 import os
 from searches import binary_search, linear_search, alphabetic_order
-from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console
+from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console, writeJson
 
 menu=1
 
@@ -22,27 +22,12 @@ while (menu==1):
     update_movie = {}
 
 ################################# - M E N U - ########################################
-            
     if section == "1":
         clean_console()
-        def writeJson():
-            # Carrega a informação
-            with open('data.json', 'r+') as file:
-                data_base = json.load(file)
 
-                # 2. Adiciona o filme novo a lista
-                data_base.append(new_movie)
-
-                #Enumera cada dicionario
-                data_base = [{"id": i, **d} for i, d in enumerate(data_base)]
-                
-                # 3. vai para o fim da lista e da o dump
-                file.seek(0)
-                json.dump(data_base, file, indent=4)
-                file.close()
         # Registo novo
         newRegistry(new_movie)
-        writeJson()
+        writeJson(new_movie)
         clean_console()
         print("New movie added!")
         input("Press enter to exit...")
@@ -116,7 +101,7 @@ while (menu==1):
             elif esc == "YES" or esc == "yes":
                 filter = input("What filter do you want to apply(Title, Release_date, Movie_Length, Director, Writer): ")
                 clean_console()
-                print("List of movies with the applied filter:")
+                print("List with the applied filter:")
 
                 with open('data.json', 'r') as file:
                     data_base = json.load(file)
@@ -147,22 +132,44 @@ while (menu==1):
     
     if section == "7":
         clean_console()
-        sequence_a = []
+        sequence = []
+
 
         with open('data.json', 'r') as file:
             data_base = json.load(file)
 
-            filter = "id"
+            filter_id = "id"
+            filter_date = "Release_date"
+            filter_length = "Movie_length"
+            
 
+        filter = input("Which of the data do you want to do a Binary search?(id, Release date, Movie length?)")
+
+        if filter == "id":
             for dict in data_base:
-                sequence_a.append(dict[filter])
-                
-        item_a = int(input("Choose the id that you want: "))
-        binary_search(sequence_a, item_a)
+                sequence.append(dict[filter_id])                     
+            item_a = int(input("Choose the id do you want to find: "))
+        elif filter == "Release date":
+            for dict in data_base:
+                sequence.append(dict[filter_date])
+                sequence.sort()
+            item_a = int(input("Which date you want to find?"))
+            clean_console()
+
+        elif filter == "Movie length":
+            for dict in data_base:
+                sequence.append(dict[filter_length])
+                sequence.sort()
+            item_a = int(input("Which movie length are you looking for?"))
+            clean_console()
+        else:
+            print("Wrong input!")
+        
+        binary_search(sequence, item_a)
 
     if section == "8":
         clean_console()
-        print("Until a next time valiant hero! With great bifanas, comes great responsibility - Uncle Ben")
+        print("Until a next time brave hero! With great bifanas, comes great responsibility - Uncle Ben")
         input()
         menu == 0
         break

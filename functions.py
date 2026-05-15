@@ -31,6 +31,22 @@ def newRegistry(new_movie):
 
     movie_writer = input("Writer of the movie: ")
     new_movie["Writer"] = movie_writer
+
+def writeJson(new_movie):
+    # Carrega a informação
+    with open('data.json', 'r+') as file:
+        data_base = json.load(file)
+
+        # 2. Adiciona o filme novo a lista
+        data_base.append(new_movie)
+
+        #Enumera cada dicionario
+        data_base = [{"id": i, **d} for i, d in enumerate(data_base)]
+                
+        # 3. vai para o fim da lista e da o dump
+        file.seek(0)
+        json.dump(data_base, file, indent=4)
+        file.close()
     
 def deleteJson(delete_movie):
     newList = []
@@ -38,14 +54,12 @@ def deleteJson(delete_movie):
         mainList = json.load(file)
         del mainList[delete_movie]
         newList = mainList
-
         newList = [{"id": i, **d} for i, d in enumerate(newList)]
+        
         file.seek(0)
-    file.close()
-
-    with open('data.json', 'w+') as file:
+        """Da o dump e fica no fim do ficheiro"""
         json.dump(newList, file, indent=4)
-    file.close()
+        file.truncate()
 
 
 def orgJson():
@@ -58,7 +72,7 @@ def orgJson():
         # 3. vai para o fim da lista e da o dump
         file.seek(0)
         json.dump(data_base, file, indent=4)
-        file.close()
+        file.truncate()
 
 def updateRegistry(update_movie, update_dict):
     
@@ -78,3 +92,5 @@ def updateRegistry(update_movie, update_dict):
 
     movie_writer = input("Writer of the movie: ")
     update_movie["Writer"] = movie_writer
+
+    
