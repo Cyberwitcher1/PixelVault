@@ -15,7 +15,7 @@ while (menu==1):
     print("6 - Linear search")
     print("7 - Binary search (in ordered data)")
     print("8 - Exit")
-    section = input("Please noble hero, choose one of the sections: ")
+    section = input("Choose one of the sections: ")
     data_base = []
     new_base = []
     new_movie = {}
@@ -24,7 +24,6 @@ while (menu==1):
 ################################# - M E N U - ########################################
     if section == "1":
         clean_console()
-
         # Registo novo
         newRegistry(new_movie)
         writeJson(new_movie)
@@ -44,7 +43,6 @@ while (menu==1):
                 clean_console()
                 file.close()
                             
-
             updateRegistry(update_movie, update_dict)
 
             with open('data.json', 'r+') as file:
@@ -81,8 +79,6 @@ while (menu==1):
                 break
             else:
                 print("Invalid Input!")
-
-
 
     """" MOSTRAR TUDO """
     if section == "4":
@@ -169,7 +165,7 @@ while (menu==1):
 
     if section == "8":
         clean_console()
-        print("Until a next time brave hero! With great bifanas, comes great responsibility - Uncle Ben")
+        print("Until a next time brave hero! With great power, comes great responsibility - Uncle Ben")
         input()
         menu == 0
         break

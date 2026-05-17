@@ -2,41 +2,32 @@ import json
 from functions import clean_console
 
 def binary_search(sequence, item):
+    """PRIMEIRO ITEM DA LISTA"""
+    first_value = int(sequence[0])
+    """ÚLTIMO ITEM DA LISTA"""
+    last_value = int(sequence[-1])
+    found = False
+
+    if item < first_value :
+        print("Target is too small!")
+        return None
+    if item > last_value:
+        print("Target is over the end index!")
+        return None
+
     begin_index = 0
     end_index = len(sequence) - 1
-    """VERIFICAR O ULTIMO DIGITO"""
-    print(sequence)
-    last_item = sequence[-1]
-    print(last_item)
-    last_value = int(last_item)
-
-    print(begin_index)
-    print(end_index)
-
-
 
     while begin_index <= end_index:
-        # item é o 2009
-        print(item)
-        # 25
-        print(end_index)
-        if item > last_value :
-             print("Number is over the end index!")
-             break
-        if item < begin_index:
-             print("Number too small!")
-             break
-
-
         """Aqui ele "corta" e cria o midpoint"""
-        midpoint = begin_index + (end_index - begin_index) // 2
+        midpoint = (begin_index + end_index) // 2
         """Aqui ele pega no midpoint criado e mete na variavel midpoint_value"""
         midpoint_string = sequence[midpoint]
-        """Conversão de midpoint_value de string para int porque nao da para comparar strings com ints """
+        """Conversão de midpoint_string de string para int porque nao da para comparar strings com ints """
         midpoint_value = int(midpoint_string)
 
+        print(f"Midpoint_value  is...", midpoint_value)
 
-        print(f"Midpoint  is...", midpoint_value)
         if midpoint_value == item:
             print("Target found!")
             input("Press enter to exit...")
@@ -51,8 +42,10 @@ def binary_search(sequence, item):
             print("The target is after midpoint...")
             # aqui o begin_index deixa de ser o inicio da lista e passa a ser o inicio do midpoint+1
             begin_index = midpoint + 1
-            print(f"Changing begin index...", begin_index)
-
+            print(f"Changing begin index to", begin_index)
+    if not found:
+         print(f"The {item} was not found!")
+         
     return None
 
 def linear_search(list, find):
