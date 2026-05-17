@@ -1,21 +1,21 @@
 import json, os, re
-from searches import binary_search, linear_search, alphabetic_order, regex_title
-from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console, writeJson, average_time
-
+from searches import binary_search, linear_search, alphabetic_order, quick_sort, regex_title
+from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console, writeJson, statistics
 menu=1
 
 while (menu==1):
-    print("|========|Menu|========")
+    print("|========|Menu|========|")
     print("1 - Add a movie")
     print("2 - Update a movie")
     print("3 - Remove a movie")
     print("4 - Show all movies")
-    print("5 - Show all movies by alphabetic order")
-    print("6 - Linear search")
-    print("7 - Binary search (in ordered data)")
-    print("8 - Statistics")
-    print("9 - Regex testing")
-    print("10 - Exit")
+    print("5 - Show all movies by alphabetic order(Bubble Sort)")
+    print("6 - Show all movies release dates with Quick Sort")
+    print("7 - Linear search")
+    print("8 - Binary search (in ordered data)")
+    print("9 - Statistics")
+    print("10 - Regex test search")
+    print("11 - Exit")
     section = input("Choose one of the sections: ")
     data_base = []
     new_base = []
@@ -59,8 +59,6 @@ while (menu==1):
                 input("Press enter to exit...")
                 file.close()
                 clean_console()
-
-
     """ REMOVE """
     if section == "3":
         clean_console()
@@ -118,18 +116,37 @@ while (menu==1):
         alphabetic_order()
         input("\nPress enter to exit...")
         clean_console()
-    """" LINEAR SEARCH """
+
+    """SHOW RELEASE DATES WITH QUICK SORT """
     if section == "6":
+        clean_console()
+        
+        movie_years=[]
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            for i in data_base:          
+                movie_years.append(int(i["Release_date"]))
+
+        quick_sort(movie_years)
+        print("List of movies release date with quick sort:")
+        print(quick_sort(movie_years))
+
+
+        input("\nPress enter to exit...")
+        clean_console()
+        
+    """" LINEAR SEARCH """
+    if section == "7":
             clean_console()       
             with open('data.json', 'r') as file:
                 data_base = json.load(file)
 
                 search_list = data_base
-                find = input("Write what you are looking for: ")
+                find = input("Write what you are looking for(Careful! It's case-sensitive): ")
                 linear_search(search_list, find)
             file.close()
     """ BINARY SEARCH """
-    if section == "7":
+    if section == "8":
         clean_console()
         sequence = []
         with open('data.json', 'r') as file:
@@ -162,14 +179,14 @@ while (menu==1):
         
         binary_search(sequence, item_a)
     """ STATISTICS"""
-    if section == "8":
-        average_time()
-    """ REGEX """
     if section == "9":
+        statistics()
+    """ REGEX """
+    if section == "10":
         clean_console()
         regex_title()
 
-    if section == "10":
+    if section == "11":
         clean_console()
         print("Until a next time brave hero! With great bifanas, comes great responsibility - Uncle Ben")
         input()

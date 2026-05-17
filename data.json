@@ -2,7 +2,7 @@
     {
         "id": 0,
         "Title": "Iron Man",
-        "Release_date": "2008",
+        "Release_date": "2021",
         "Movie_length": "126",
         "Director": "Jon Favreau",
         "Writer": "Mark Fergus"
@@ -10,7 +10,7 @@
     {
         "id": 1,
         "Title": "The Incredible Hulk",
-        "Release_date": "2008",
+        "Release_date": "2015",
         "Movie_length": "112",
         "Director": "Louis Leterrier",
         "Writer": "Zak Penn"
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "Title": "Captain America: The First Avenger",
-        "Release_date": "2011",
+        "Release_date": "2019",
         "Movie_length": "124",
         "Director": "Joe Johnston",
         "Writer": "Christopher Markus"
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "Title": "The Avengers",
-        "Release_date": "2012",
+        "Release_date": "2008",
         "Movie_length": "143",
         "Director": "Joss Whedon",
         "Writer": "Joss Whedon"
@@ -34,7 +34,7 @@
     {
         "id": 4,
         "Title": "Iron Man 3",
-        "Release_date": "2013",
+        "Release_date": "2017",
         "Movie_length": "130",
         "Director": "Shane Black",
         "Writer": "Shane Black"
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "Title": "Thor: The Dark World",
-        "Release_date": "2013",
+        "Release_date": "2016",
         "Movie_length": "112",
         "Director": "Alan Taylor",
         "Writer": "Christopher Yost"
@@ -50,7 +50,7 @@
     {
         "id": 6,
         "Title": "Captain America: The Winter Soldier",
-        "Release_date": "2014",
+        "Release_date": "2022",
         "Movie_length": "136",
         "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
@@ -58,7 +58,7 @@
     {
         "id": 7,
         "Title": "Guardians of the Galaxy",
-        "Release_date": "2014",
+        "Release_date": "2011",
         "Movie_length": "121",
         "Director": "James Gunn",
         "Writer": "James Gunn"
@@ -66,7 +66,7 @@
     {
         "id": 8,
         "Title": "Avengers: Age of Ultron",
-        "Release_date": "2015",
+        "Release_date": "2018",
         "Movie_length": "141",
         "Director": "Joss Whedon",
         "Writer": "Joss Whedon"
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "Title": "Ant-Man",
-        "Release_date": "2015",
+        "Release_date": "2013",
         "Movie_length": "117",
         "Director": "Peyton Reed",
         "Writer": "Edgar Wright"
@@ -82,7 +82,7 @@
     {
         "id": 10,
         "Title": "Captain America: Civil War",
-        "Release_date": "2016",
+        "Release_date": "2019",
         "Movie_length": "147",
         "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
@@ -90,7 +90,7 @@
     {
         "id": 11,
         "Title": "Doctor Strange",
-        "Release_date": "2016",
+        "Release_date": "2014",
         "Movie_length": "115",
         "Director": "Scott Derrickson",
         "Writer": "Jon Spaihts"
@@ -98,7 +98,7 @@
     {
         "id": 12,
         "Title": "Guardians of the Galaxy Vol. 2",
-        "Release_date": "2017",
+        "Release_date": "2021",
         "Movie_length": "136",
         "Director": "James Gunn",
         "Writer": "James Gunn"
@@ -106,7 +106,7 @@
     {
         "id": 13,
         "Title": "Spider-Man: Homecoming",
-        "Release_date": "2017",
+        "Release_date": "2008",
         "Movie_length": "133",
         "Director": "Jon Watts",
         "Writer": "Jonathan Goldstein"
@@ -114,7 +114,7 @@
     {
         "id": 14,
         "Title": "Thor: Ragnarok",
-        "Release_date": "2017",
+        "Release_date": "2015",
         "Movie_length": "130",
         "Director": "Taika Waititi",
         "Writer": "Eric Pearson"
@@ -122,7 +122,7 @@
     {
         "id": 15,
         "Title": "Black Panther",
-        "Release_date": "2018",
+        "Release_date": "2017",
         "Movie_length": "134",
         "Director": "Ryan Coogler",
         "Writer": "Ryan Coogler"
@@ -130,7 +130,7 @@
     {
         "id": 16,
         "Title": "Avengers: Infinity War",
-        "Release_date": "2018",
+        "Release_date": "2013",
         "Movie_length": "149",
         "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
@@ -138,7 +138,7 @@
     {
         "id": 17,
         "Title": "Ant-Man and the Wasp",
-        "Release_date": "2018",
+        "Release_date": "2019",
         "Movie_length": "118",
         "Director": "Peyton Reed",
         "Writer": "Chris McKenna"
@@ -146,7 +146,7 @@
     {
         "id": 18,
         "Title": "Captain Marvel",
-        "Release_date": "2019",
+        "Release_date": "2016",
         "Movie_length": "123",
         "Director": "Anna Boden",
         "Writer": "Anna Boden"
@@ -154,7 +154,7 @@
     {
         "id": 19,
         "Title": "Avengers: Endgame",
-        "Release_date": "2019",
+        "Release_date": "2017",
         "Movie_length": "181",
         "Director": "Anthony and Joe Russo",
         "Writer": "Christopher Markus"
@@ -162,7 +162,7 @@
     {
         "id": 20,
         "Title": "Spider-Man: Far From Home",
-        "Release_date": "2019",
+        "Release_date": "2021",
         "Movie_length": "129",
         "Director": "Jon Watts",
         "Writer": "Chris McKenna"
@@ -170,7 +170,7 @@
     {
         "id": 21,
         "Title": "Black Widow",
-        "Release_date": "2021",
+        "Release_date": "2014",
         "Movie_length": "134",
         "Director": "Cate Shortland",
         "Writer": "Eric Pearson"
@@ -178,7 +178,7 @@
     {
         "id": 22,
         "Title": "Shang-Chi and the Legend of the Ten Rings",
-        "Release_date": "2021",
+        "Release_date": "2018",
         "Movie_length": "132",
         "Director": "Destin Daniel Cretton",
         "Writer": "Dave Callaham"
@@ -186,7 +186,7 @@
     {
         "id": 23,
         "Title": "Eternals",
-        "Release_date": "2021",
+        "Release_date": "2012",
         "Movie_length": "156",
         "Director": "Zhao",
         "Writer": "Zhao"
@@ -194,7 +194,7 @@
     {
         "id": 24,
         "Title": "Spider-Man: No Way Home",
-        "Release_date": "2021",
+        "Release_date": "2018",
         "Movie_length": "148",
         "Director": "Jon Watts",
         "Writer": "Chris McKenna"
@@ -202,7 +202,7 @@
     {
         "id": 25,
         "Title": "Doctor Strange in the Multiverse of Madness",
-        "Release_date": "2022",
+        "Release_date": "2019",
         "Movie_length": "126",
         "Director": "Sam Raimi",
         "Writer": "Michael Waldron"

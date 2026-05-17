@@ -95,7 +95,7 @@ def updateRegistry(update_movie, update_dict):
     update_movie["Writer"] = movie_writer
 
 
-def average_time():
+def statistics():
         clean_console()
         with open('data.json', 'r+') as file:
             data_base = json.load(file)
@@ -114,16 +114,10 @@ def average_time():
         print(f"The average from every movie ->", average_round, "minutes")
         print(f"The total of movies inside the data base ->", counter+1)
 
-
-
-
         input("Press enter to exit...")
         clean_console()
 
-def total():
-        clean_console()
-        with open('data.json', 'r+') as file:
-            data_base = json.load(file)
+
             
 
 

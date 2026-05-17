@@ -93,15 +93,52 @@ def alphabetic_order():
         except:
             print("File 'ni' found!")
 
+
+def quick_sort(array):
+
+        if len(array) <= 1:
+             return array
+        
+
+        central_point = array[-1]
+
+        items_greater = []
+        items_lower = []
+
+        for item in array[:-1]:
+            if item > central_point:
+                items_greater.append(item)
+            else:
+                items_lower.append(item)
+        
+        return quick_sort(items_lower) + [central_point] + quick_sort(items_greater)
+
+        
+
+
+                    
+    
+        
+         
+
+
+
+    
+
 def regex_title():
         with open('data.json', 'r+') as file:
             data_base = json.load(file)
             target = input("Write what do you wanna search: ")
+            clean_console()
 
 
             for i in data_base:
-                search = re.search(r'^[A-Z]', target, flags=re.IGNORECASE)
+                movie_title = i["Title"]
+                search = re.search(target, movie_title, flags=re.IGNORECASE)
                 if search:
                     print("Name from the movie was found!")
                 else:
+                    
                     pass
+        input("Press enter to exit...")
+    
