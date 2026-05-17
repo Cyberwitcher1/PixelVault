@@ -1,4 +1,4 @@
-import json
+import json, re
 from functions import clean_console
 
 def binary_search(sequence, item):
@@ -92,5 +92,16 @@ def alphabetic_order():
                     print("Invalid Input!")
         except:
             print("File 'ni' found!")
-            
 
+def regex_title():
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            target = input("Write what do you wanna search: ")
+
+
+            for i in data_base:
+                search = re.search(r'^[A-Z]', target, flags=re.IGNORECASE)
+                if search:
+                    print("Name from the movie was found!")
+                else:
+                    pass

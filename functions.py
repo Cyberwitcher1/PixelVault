@@ -63,16 +63,17 @@ def deleteJson(delete_movie):
 
 
 def orgJson():
-    # Carrega a informação
-    with open('data.json', 'r+') as file:
-        data_base = json.load(file)
-        #Enumera cada dicionario
-        data_base = [{**d,"id": i,} for i, d in enumerate(data_base)]
-            
-        # 3. vai para o fim da lista e da o dump
-        file.seek(0)
-        json.dump(data_base, file, indent=4)
-        file.truncate()
+        # Carrega a informação
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            #Enumera cada dicionario
+            data_base = [{**d,"id": i,} for i, d in enumerate(data_base)]
+                
+            # 3. vai para o fim da lista e da o dump
+            file.seek(0)
+            json.dump(data_base, file, indent=4)
+            file.truncate()
+
 
 def updateRegistry(update_movie, update_dict):
     
@@ -92,5 +93,38 @@ def updateRegistry(update_movie, update_dict):
 
     movie_writer = input("Writer of the movie: ")
     update_movie["Writer"] = movie_writer
+
+
+def average_time():
+        clean_console()
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            total = 0
+            counter = -1
+
+
+            for i in data_base:
+                converted_number = int(i["Movie_length"])
+                total = converted_number + total
+                counter = counter + 1
+            file.close()
+        
+        average = total / counter
+        average_round = round(average)
+        print(f"The average from every movie ->", average_round, "minutes")
+        print(f"The total of movies inside the data base ->", counter+1)
+
+
+
+
+        input("Press enter to exit...")
+        clean_console()
+
+def total():
+        clean_console()
+        with open('data.json', 'r+') as file:
+            data_base = json.load(file)
+            
+
 
     

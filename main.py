@@ -1,7 +1,6 @@
-import json
-import os
-from searches import binary_search, linear_search, alphabetic_order
-from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console, writeJson
+import json, os, re
+from searches import binary_search, linear_search, alphabetic_order, regex_title
+from functions import title_id, newRegistry, deleteJson, orgJson, updateRegistry, clean_console, writeJson, average_time
 
 menu=1
 
@@ -14,14 +13,18 @@ while (menu==1):
     print("5 - Show all movies by alphabetic order")
     print("6 - Linear search")
     print("7 - Binary search (in ordered data)")
-    print("8 - Exit")
+    print("8 - Statistics")
+    print("9 - Regex testing")
+    print("10 - Exit")
     section = input("Choose one of the sections: ")
     data_base = []
     new_base = []
     new_movie = {}
     update_movie = {}
 
+
 ################################# - M E N U - ########################################
+    """ ADD """
     if section == "1":
         clean_console()
         # Registo novo
@@ -32,11 +35,10 @@ while (menu==1):
         input("Press enter to exit...")
         clean_console()
         
-    """ ATUALIZAR """
+    """ UPDATE """
     if section == "2":
             clean_console()
             title_id()
-
             with open('data.json', 'r+') as file:
                 data_base = json.load(file)
                 update_dict = int(input("What movie/id do you want to update?"))
@@ -58,7 +60,8 @@ while (menu==1):
                 file.close()
                 clean_console()
 
-    """ REMOVER """
+
+    """ REMOVE """
     if section == "3":
         clean_console()
         title_id()
@@ -80,20 +83,20 @@ while (menu==1):
             else:
                 print("Invalid Input!")
 
-    """" MOSTRAR TUDO """
+    """" SHOW ALL """
     if section == "4":
         clean_console()
         while True:
             esc = input("Do you want any filter?(YES/NO): ")
             clean_console()
 
-            # SEM FILTRO
+            # WITH FILTER
             if esc == "NO" or esc == "no":
                 with open('data.json', 'r') as file:
                     data_base = json.load(file)
                 print(data_base)
                 break
-            # COM FILTRO    
+            # WITHOUT FILTER   
             elif esc == "YES" or esc == "yes":
                 filter = input("What filter do you want to apply(Title, Release_date, Movie_Length, Director, Writer): ")
                 clean_console()
@@ -109,13 +112,13 @@ while (menu==1):
 
         input("\nClick enter to exit...")
         clean_console()
-                
+    """" SHOW ALL - ALPHABETIC ORDER """            
     if section == "5":
         clean_console()
         alphabetic_order()
         input("\nPress enter to exit...")
         clean_console()
-                
+    """" LINEAR SEARCH """
     if section == "6":
             clean_console()       
             with open('data.json', 'r') as file:
@@ -125,19 +128,15 @@ while (menu==1):
                 find = input("Write what you are looking for: ")
                 linear_search(search_list, find)
             file.close()
-    
+    """ BINARY SEARCH """
     if section == "7":
         clean_console()
         sequence = []
-
-
         with open('data.json', 'r') as file:
             data_base = json.load(file)
-
             filter_id = "id"
             filter_date = "Release_date"
             filter_length = "Movie_length"
-            
 
         filter = input("Which of the data do you want to do a Binary search?(id, Release date, Movie length?)")
 
@@ -162,10 +161,17 @@ while (menu==1):
             print("Wrong input!")
         
         binary_search(sequence, item_a)
-
+    """ STATISTICS"""
     if section == "8":
+        average_time()
+    """ REGEX """
+    if section == "9":
         clean_console()
-        print("Until a next time brave hero! With great power, comes great responsibility - Uncle Ben")
+        regex_title()
+
+    if section == "10":
+        clean_console()
+        print("Until a next time brave hero! With great bifanas, comes great responsibility - Uncle Ben")
         input()
         menu == 0
         break
