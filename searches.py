@@ -57,7 +57,7 @@ def linear_search(list, find):
             if dict_values == find:
                 i = i + 1
                 j = 1
-                print(find + f" was found on the {i}º dictionary") 
+                print(find + f" was found on the {i} dictionary!") 
                 break
             else:
                 continue

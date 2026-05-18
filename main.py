@@ -188,7 +188,7 @@ while (menu==1):
 
     if section == "11":
         clean_console()
-        print("Until a next time brave hero! With great bifanas, comes great responsibility - Uncle Ben")
+        print("Until a next time brave hero! With great power, comes great responsibility - Uncle Ben")
         input()
         menu == 0
         break
